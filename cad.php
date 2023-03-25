@@ -13,39 +13,12 @@
     </header>
     <main>
         <?php
-            $lista = ["Luiz", "Ana", "Pedro"];
-            $achou = false;
-            foreach ($lista as $key => $value) {
-                echo "$value <br>";
-                echo '------------------------------------------------------------------------------------------';
-            } 
+          
             $nome = $_GET['nome'] ?? "Nome inválido";
             $sobrenome = $_GET['sobrenome'] ?? "Sobrenome inválido";
-            date_default_timezone_set("America/Sao_Paulo");
-            echo "Hoje é dia " . date("d/M/Y");
-            echo "<br>";
-            echo " e a hora atual é " . date("G:i:s T");
-            echo "<br>";
-            echo '------------------------------------------------------------------------------------------';
-            
-            foreach ($lista as $key => $value) {
-               if ($nome == $value) {
-                    echo "Olá <strong>$nome $sobrenome</strong>, bem vindo a este site.\u{1f30e}";
-                    echo "<br>";
-                    $achou = true;
-                }
-            }
-            if ($achou == false) {echo "<strong>$nome</strong> não encontrado na lista!";}        
-    
-            echo "<br>";      
-            echo '------------------------------------------------------------------------------------------';
-            echo '------------------------------------------------------------------------------------------';
-            echo "<br>";
-            echo "Poderia usar também o '$'_REQUEST <br>";
+          
             echo var_dump($_REQUEST['nome'] , $_REQUEST['sobrenome']);
-            echo "<br>";
-            echo "<br>";
-
+           
            
         ?>
     </main>
