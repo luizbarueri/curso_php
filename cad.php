@@ -14,10 +14,11 @@
     <main>
         <?php
           
-            $nome = $_GET['nome'] ?? "Nome inválido";
-            $sobrenome = $_GET['sobrenome'] ?? "Sobrenome inválido";
+            $nome = $_POST['nome'] ?? "Nome inválido";
+            $sobrenome = $_POST['sobrenome'] ?? "Sobrenome inválido";
           
-            echo var_dump($_REQUEST['nome'] , $_REQUEST['sobrenome']);
+            echo $nome;
+            echo $sobrenome;
            
            
         ?>
